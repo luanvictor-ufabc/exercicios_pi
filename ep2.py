@@ -122,12 +122,29 @@ while n > 0:
 
 # EX 10
 
-n = int(input())
-vetor = list(map(int, input().split()))
+import math
 
-vistos = []
+carga = int(input())
+Ax = float(input())
+Ay = float(input())
+Bx = float(input())
+By = float(input())
 
-for num in vetor:
-    if num not in vistos:
-        print(num, end=" ")
-        vistos.append(num)
+if carga <= 50000:
+    autonomia = 18000
+elif carga <= 200000:
+    autonomia = 9000
+else:
+    autonomia = 3000
+
+distancia = math.sqrt((Bx - Ax)**2 + (By - Ay)**2)
+limite = autonomia * 1.1
+
+print(f"{distancia:.2f}")
+
+if distancia <= autonomia:
+    print("SIM")
+elif distancia <= limite:
+    print("TALVEZ")
+else:
+    print("NAO")
