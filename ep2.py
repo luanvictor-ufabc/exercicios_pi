@@ -7,20 +7,15 @@ c = int(input())
 
 delta = b**2 - 4*a*c
 
-if a == 0:
-    print("Sem solucao real!")
-    print(f"{delta:.2f}")
+if delta < 0:
+        print("Sem solucao real!")
+        print(f"Delta = {delta:.2f}")
+
+elif delta == 0:
+        x = -b / (2*a)
+        print(f"x = {x:.2f}")
 
 else:
-    if delta < 0:
-        print("Sem solucao real!")
-        print(f"{delta:.2f}")
-
-    elif delta == 0:
-        x = -b / (2*a)
-        print(f"{x:.2f}")
-
-    else:
         x1 = (-b - math.sqrt(delta)) / (2*a)
         x2 = (-b + math.sqrt(delta)) / (2*a)
 
@@ -28,8 +23,8 @@ else:
         menor = min(x1, x2)
         maior = max(x1, x2)
 
-        print(f"{menor:.2f}")
-        print(f"{maior:.2f}")
+        print(f"x1 = {menor:.2f}")
+        print(f"x2 = {maior:.2f}")
 
 # EX 5
 
