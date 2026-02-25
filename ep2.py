@@ -103,17 +103,40 @@ else:
 
 # EX 9
 
-n = int(input())
+from os import error
+# funcao_origem: 
+def funcao_origem():
+  origem = int(input("Digite o código do planeta de origem"))
+  marte = 80
+  saturno = 81
+  netuno = 90
 
-n = abs(n)
+  if origem == marte or saturno or netuno:
+    return marte, saturno, netuno;
+  else:
+    return error
 
-if n == 0:
-    print(0)
+# funcao_destino:
+def funcao_destino(): 
+  destino = input("Digite o código do destino")
+  HD21749b = 91
 
-while n > 0:
-    digito = n % 10
-    print(digito)
-    n = n // 10
+  if destino == 91:
+    return HD21749b
+  else:
+    return error
+
+# funcao_modelo:
+def funcao_modelo():
+  modelo = input("Digite o código do modelo")
+  A6000 = 60
+  B7500 = 61
+  C9000 = 62
+
+  if modelo == 60
+
+
+  return A6000, B7500, C9000;
 
 # EX 10
 
